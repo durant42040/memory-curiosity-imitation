@@ -1,0 +1,346 @@
+/workspace/DIFO-on-POMDP/skill_based/scripts/train_agent/train_adversarial.py --env MiniGrid-MemoryS11-v0 --map_size 11 --exp_name properly_load_lstm --episodes 1000 --disc_epochs 5 --GAIL_iters 10 --encoder lstm
+
+Namespace(algo='ppo', env='MiniGrid-MemoryS11-v0', disc_path='scripts/train_agent/advs_output/properly_load_lstm/discriminator/model.pt', model='properly_load_lstm', seed=1, log_interval=1, save_interval=5, update_per_gail_iter=15, procs=16, frames=10000000, epochs=4, batch_size=256, frames_per_proc=None, discount=0.99, lr=0.001, gae_lambda=0.95, entropy_coef=0.05, value_loss_coef=0.5, max_grad_norm=0.5, optim_eps=1e-08, clip_eps=0.2, recurrence=4, text=False, full_obs=False, regularize_disc=False, encoder='lstm', policy_ckpt_path='ckpt/memory_lstm_11/best.pth', mem=True)
+
+Device: cuda
+
+Environments loaded
+
+Training status loaded
+
+Observations preprocessor loaded
+Model loaded
+
+ACModel(
+  (image_conv): Sequential(
+    (0): Conv2d(3, 16, kernel_size=(2, 2), stride=(1, 1))
+    (1): ReLU()
+    (2): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
+    (3): Conv2d(16, 32, kernel_size=(2, 2), stride=(1, 1))
+    (4): ReLU()
+    (5): Conv2d(32, 64, kernel_size=(2, 2), stride=(1, 1))
+    (6): ReLU()
+  )
+  (memory_rnn): LSTMCell(64, 64)
+  (actor): Sequential(
+    (0): Linear(in_features=64, out_features=64, bias=True)
+    (1): Tanh()
+    (2): Linear(in_features=64, out_features=7, bias=True)
+  )
+  (critic): Sequential(
+    (0): Linear(in_features=64, out_features=64, bias=True)
+    (1): Tanh()
+    (2): Linear(in_features=64, out_features=1, bias=True)
+  )
+)
+
+Optimizer loaded
+
+U 1 | F 002048 | FPS 0180 | D 11 | rR:μσmM 0.00 0.00 0.00 0.00 | F:μσmM 0.0 0.0 0 0 | H 1.946 | V 0.063 | pL 0.011 | vL 0.000 | ∇ 0.014
+U 2 | F 004096 | FPS 0109 | D 30 | rR:μσmM 0.08 0.21 0.00 0.64 | F:μσmM 40.0 85.5 0.0 246.0 | H 1.943 | V 0.071 | pL 0.002 | vL 0.003 | ∇ 0.012
+U 3 | F 006144 | FPS 0078 | D 56 | rR:μσmM 0.11 0.23 0.00 0.64 | F:μσmM 85.1 134.1 0.0 378.0 | H 1.945 | V 0.066 | pL 0.008 | vL 0.001 | ∇ 0.005
+/workspace/DIFO-on-POMDP/skill_based/scripts/train_agent/train_adversarial.py --env MiniGrid-MemoryS11-v0 --map_size 11 --exp_name properly_load_lstm --episodes 1000 --disc_epochs 5 --GAIL_iters 10 --encoder lstm
+
+Namespace(algo='ppo', env='MiniGrid-MemoryS11-v0', disc_path='scripts/train_agent/advs_output/properly_load_lstm/discriminator/model.pt', model='properly_load_lstm', seed=1, log_interval=1, save_interval=5, update_per_gail_iter=15, procs=16, frames=10000000, epochs=4, batch_size=256, frames_per_proc=None, discount=0.99, lr=0.001, gae_lambda=0.95, entropy_coef=0.05, value_loss_coef=0.5, max_grad_norm=0.5, optim_eps=1e-08, clip_eps=0.2, recurrence=4, text=False, full_obs=False, regularize_disc=False, encoder='lstm', policy_ckpt_path='ckpt/memory_lstm_11/best.pth', mem=True)
+
+Device: cuda
+
+Environments loaded
+
+Training status loaded
+
+Observations preprocessor loaded
+Model loaded
+
+ACModel(
+  (image_conv): Sequential(
+    (0): Conv2d(3, 16, kernel_size=(2, 2), stride=(1, 1))
+    (1): ReLU()
+    (2): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
+    (3): Conv2d(16, 32, kernel_size=(2, 2), stride=(1, 1))
+    (4): ReLU()
+    (5): Conv2d(32, 64, kernel_size=(2, 2), stride=(1, 1))
+    (6): ReLU()
+  )
+  (memory_rnn): LSTMCell(64, 64)
+  (actor): Sequential(
+    (0): Linear(in_features=64, out_features=64, bias=True)
+    (1): Tanh()
+    (2): Linear(in_features=64, out_features=7, bias=True)
+  )
+  (critic): Sequential(
+    (0): Linear(in_features=64, out_features=64, bias=True)
+    (1): Tanh()
+    (2): Linear(in_features=64, out_features=1, bias=True)
+  )
+)
+
+Optimizer loaded
+
+U 1 | F 002048 | FPS 0216 | D 9 | rR:μσmM 0.22 0.37 0.00 0.97 | F:μσmM 27.8 46.5 0.0 128.0 | H 1.944 | V 0.091 | pL -0.012 | vL 0.008 | ∇ 0.036
+U 2 | F 004096 | FPS 0113 | D 27 | rR:μσmM 0.27 0.40 0.00 0.97 | F:μσmM 68.5 76.1 0.0 233.0 | H 1.944 | V 0.082 | pL 0.006 | vL 0.003 | ∇ 0.011
+U 3 | F 006144 | FPS 0078 | D 54 | rR:μσmM 0.42 0.43 0.00 0.97 | F:μσmM 91.2 73.5 0.0 233.0 | H 1.944 | V 0.084 | pL -0.000 | vL 0.004 | ∇ 0.031
+/workspace/DIFO-on-POMDP/skill_based/scripts/train_agent/train_adversarial.py --env MiniGrid-MemoryS11-v0 --map_size 11 --exp_name properly_load_lstm --episodes 1000 --disc_epochs 5 --GAIL_iters 10 --encoder lstm --ppo_updates 5
+
+Namespace(algo='ppo', env='MiniGrid-MemoryS11-v0', disc_path='scripts/train_agent/advs_output/properly_load_lstm/discriminator/model.pt', model='properly_load_lstm', seed=1, log_interval=1, save_interval=5, update_per_gail_iter=5, procs=16, frames=10000000, epochs=4, batch_size=256, frames_per_proc=None, discount=0.99, lr=0.001, gae_lambda=0.95, entropy_coef=0.05, value_loss_coef=0.5, max_grad_norm=0.5, optim_eps=1e-08, clip_eps=0.2, recurrence=4, text=False, full_obs=False, regularize_disc=False, encoder='lstm', policy_ckpt_path='ckpt/memory_lstm_11/best.pth', mem=True)
+
+Device: cuda
+
+Environments loaded
+
+Training status loaded
+
+Observations preprocessor loaded
+Model loaded
+
+ACModel(
+  (image_conv): Sequential(
+    (0): Conv2d(3, 16, kernel_size=(2, 2), stride=(1, 1))
+    (1): ReLU()
+    (2): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
+    (3): Conv2d(16, 32, kernel_size=(2, 2), stride=(1, 1))
+    (4): ReLU()
+    (5): Conv2d(32, 64, kernel_size=(2, 2), stride=(1, 1))
+    (6): ReLU()
+  )
+  (memory_rnn): LSTMCell(64, 64)
+  (actor): Sequential(
+    (0): Linear(in_features=64, out_features=64, bias=True)
+    (1): Tanh()
+    (2): Linear(in_features=64, out_features=7, bias=True)
+  )
+  (critic): Sequential(
+    (0): Linear(in_features=64, out_features=64, bias=True)
+    (1): Tanh()
+    (2): Linear(in_features=64, out_features=1, bias=True)
+  )
+)
+
+Optimizer loaded
+
+U 1 | F 002048 | FPS 0172 | D 11 | rR:μσmM 0.22 0.37 0.00 0.97 | F:μσmM 27.8 46.5 0.0 128.0 | H 1.944 | V 0.091 | pL -0.012 | vL 0.008 | ∇ 0.036
+U 2 | F 004096 | FPS 0138 | D 26 | rR:μσmM 0.27 0.40 0.00 0.97 | F:μσmM 68.5 76.1 0.0 233.0 | H 1.944 | V 0.082 | pL 0.006 | vL 0.003 | ∇ 0.011
+U 3 | F 006144 | FPS 0066 | D 58 | rR:μσmM 0.42 0.43 0.00 0.97 | F:μσmM 91.2 73.5 0.0 233.0 | H 1.944 | V 0.084 | pL -0.000 | vL 0.004 | ∇ 0.031
+U 4 | F 008192 | FPS 0054 | D 95 | rR:μσmM 0.54 0.39 0.00 0.97 | F:μσmM 161.8 109.3 23.0 441.0 | H 1.942 | V 0.099 | pL 0.003 | vL 0.003 | ∇ 0.023
+U 5 | F 010240 | FPS 0055 | D 133 | rR:μσmM 0.27 0.37 0.00 0.92 | F:μσmM 399.2 226.9 52.0 605.0 | H 1.945 | V 0.083 | pL 0.018 | vL 0.001 | ∇ 0.009
+Status saved
+/workspace/DIFO-on-POMDP/skill_based/scripts/train_agent/train_adversarial.py --env MiniGrid-MemoryS11-v0 --map_size 11 --exp_name properly_load_lstm --episodes 1000 --disc_epochs 5 --GAIL_iters 10 --encoder lstm --ppo_updates 5
+
+Namespace(algo='ppo', env='MiniGrid-MemoryS11-v0', disc_path='scripts/train_agent/advs_output/properly_load_lstm/discriminator/model.pt', model='properly_load_lstm', seed=1, log_interval=1, save_interval=5, update_per_gail_iter=5, procs=16, frames=10000000, epochs=4, batch_size=256, frames_per_proc=None, discount=0.99, lr=0.001, gae_lambda=0.95, entropy_coef=0.05, value_loss_coef=0.5, max_grad_norm=0.5, optim_eps=1e-08, clip_eps=0.2, recurrence=4, text=False, full_obs=False, regularize_disc=False, encoder='lstm', policy_ckpt_path='ckpt/memory_lstm_11/best.pth', mem=True)
+
+Device: cuda
+
+Environments loaded
+
+Training status loaded
+
+Observations preprocessor loaded
+Model loaded
+
+ACModel(
+  (image_conv): Sequential(
+    (0): Conv2d(3, 16, kernel_size=(2, 2), stride=(1, 1))
+    (1): ReLU()
+    (2): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
+    (3): Conv2d(16, 32, kernel_size=(2, 2), stride=(1, 1))
+    (4): ReLU()
+    (5): Conv2d(32, 64, kernel_size=(2, 2), stride=(1, 1))
+    (6): ReLU()
+  )
+  (memory_rnn): LSTMCell(64, 64)
+  (actor): Sequential(
+    (0): Linear(in_features=64, out_features=64, bias=True)
+    (1): Tanh()
+    (2): Linear(in_features=64, out_features=7, bias=True)
+  )
+  (critic): Sequential(
+    (0): Linear(in_features=64, out_features=64, bias=True)
+    (1): Tanh()
+    (2): Linear(in_features=64, out_features=1, bias=True)
+  )
+)
+
+Optimizer loaded
+
+U 6 | F 012288 | FPS 0140 | D 14 | rR:μσmM 0.22 0.39 0.00 0.93 | F:μσmM 20.6 33.9 0.0 110.0 | H 1.938 | V 0.118 | pL -0.003 | vL 0.007 | ∇ 0.048
+U 7 | F 014336 | FPS 0127 | D 30 | rR:μσmM 0.34 0.44 0.00 0.95 | F:μσmM 71.6 68.8 0.0 240.0 | H 1.937 | V 0.132 | pL 0.016 | vL 0.007 | ∇ 0.036
+U 8 | F 016384 | FPS 0086 | D 54 | rR:μσmM 0.41 0.43 0.00 0.96 | F:μσmM 116.1 102.1 23.0 365.0 | H 1.931 | V 0.136 | pL -0.009 | vL 0.012 | ∇ 0.042
+U 9 | F 018432 | FPS 0067 | D 85 | rR:μσmM 0.60 0.42 0.00 0.98 | F:μσmM 92.1 121.0 15.0 403.0 | H 1.930 | V 0.160 | pL -0.015 | vL 0.013 | ∇ 0.046
+U 10 | F 020480 | FPS 0057 | D 121 | rR:μσmM 0.34 0.44 0.00 0.98 | F:μσmM 273.9 259.1 13.0 605.0 | H 1.925 | V 0.179 | pL 0.012 | vL 0.014 | ∇ 0.051
+Status saved
+/workspace/DIFO-on-POMDP/skill_based/scripts/train_agent/train_adversarial.py --env MiniGrid-MemoryS11-v0 --map_size 11 --exp_name properly_load_lstm --episodes 1000 --disc_epochs 5 --GAIL_iters 10 --encoder lstm --ppo_updates 5
+
+Namespace(algo='ppo', env='MiniGrid-MemoryS11-v0', disc_path='scripts/train_agent/advs_output/properly_load_lstm/discriminator/model.pt', model='properly_load_lstm', seed=1, log_interval=1, save_interval=5, update_per_gail_iter=5, procs=16, frames=10000000, epochs=4, batch_size=256, frames_per_proc=None, discount=0.99, lr=0.001, gae_lambda=0.95, entropy_coef=0.05, value_loss_coef=0.5, max_grad_norm=0.5, optim_eps=1e-08, clip_eps=0.2, recurrence=4, text=False, full_obs=False, regularize_disc=False, encoder='lstm', policy_ckpt_path='ckpt/memory_lstm_11/best.pth', mem=True)
+
+Device: cuda
+
+Environments loaded
+
+Training status loaded
+
+Observations preprocessor loaded
+Model loaded
+
+ACModel(
+  (image_conv): Sequential(
+    (0): Conv2d(3, 16, kernel_size=(2, 2), stride=(1, 1))
+    (1): ReLU()
+    (2): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
+    (3): Conv2d(16, 32, kernel_size=(2, 2), stride=(1, 1))
+    (4): ReLU()
+    (5): Conv2d(32, 64, kernel_size=(2, 2), stride=(1, 1))
+    (6): ReLU()
+  )
+  (memory_rnn): LSTMCell(64, 64)
+  (actor): Sequential(
+    (0): Linear(in_features=64, out_features=64, bias=True)
+    (1): Tanh()
+    (2): Linear(in_features=64, out_features=7, bias=True)
+  )
+  (critic): Sequential(
+    (0): Linear(in_features=64, out_features=64, bias=True)
+    (1): Tanh()
+    (2): Linear(in_features=64, out_features=1, bias=True)
+  )
+)
+
+Optimizer loaded
+
+U 11 | F 022528 | FPS 0238 | D 8 | rR:μσmM 0.36 0.46 0.00 0.98 | F:μσmM 45.2 26.8 9.0 107.0 | H 1.905 | V 0.273 | pL 0.030 | vL 0.028 | ∇ 0.061
+U 12 | F 024576 | FPS 0138 | D 23 | rR:μσmM 0.52 0.45 0.00 0.99 | F:μσmM 59.6 48.8 7.0 190.0 | H 1.906 | V 0.239 | pL -0.007 | vL 0.023 | ∇ 0.045
+U 13 | F 026624 | FPS 0123 | D 40 | rR:μσmM 0.40 0.46 0.00 0.99 | F:μσmM 54.3 48.5 10.0 269.0 | H 1.913 | V 0.264 | pL 0.003 | vL 0.031 | ∇ 0.047
+U 14 | F 028672 | FPS 0118 | D 57 | rR:μσmM 0.26 0.42 0.00 0.98 | F:μσmM 64.2 44.8 16.0 191.0 | H 1.921 | V 0.205 | pL 0.032 | vL 0.016 | ∇ 0.041
+U 15 | F 030720 | FPS 0059 | D 92 | rR:μσmM 0.30 0.43 0.00 0.97 | F:μσmM 95.1 116.5 9.0 605.0 | H 1.925 | V 0.190 | pL 0.025 | vL 0.017 | ∇ 0.036
+Status saved
+/workspace/DIFO-on-POMDP/skill_based/scripts/train_agent/train_adversarial.py --env MiniGrid-MemoryS11-v0 --map_size 11 --exp_name properly_load_lstm --episodes 1000 --disc_epochs 5 --GAIL_iters 10 --encoder lstm --ppo_updates 5
+
+Namespace(algo='ppo', env='MiniGrid-MemoryS11-v0', disc_path='scripts/train_agent/advs_output/properly_load_lstm/discriminator/model.pt', model='properly_load_lstm', seed=1, log_interval=1, save_interval=5, update_per_gail_iter=5, procs=16, frames=10000000, epochs=4, batch_size=256, frames_per_proc=None, discount=0.99, lr=0.001, gae_lambda=0.95, entropy_coef=0.05, value_loss_coef=0.5, max_grad_norm=0.5, optim_eps=1e-08, clip_eps=0.2, recurrence=4, text=False, full_obs=False, regularize_disc=False, encoder='lstm', policy_ckpt_path='ckpt/memory_lstm_11/best.pth', mem=True)
+
+Device: cuda
+
+Environments loaded
+
+Training status loaded
+
+Observations preprocessor loaded
+Model loaded
+
+ACModel(
+  (image_conv): Sequential(
+    (0): Conv2d(3, 16, kernel_size=(2, 2), stride=(1, 1))
+    (1): ReLU()
+    (2): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
+    (3): Conv2d(16, 32, kernel_size=(2, 2), stride=(1, 1))
+    (4): ReLU()
+    (5): Conv2d(32, 64, kernel_size=(2, 2), stride=(1, 1))
+    (6): ReLU()
+  )
+  (memory_rnn): LSTMCell(64, 64)
+  (actor): Sequential(
+    (0): Linear(in_features=64, out_features=64, bias=True)
+    (1): Tanh()
+    (2): Linear(in_features=64, out_features=7, bias=True)
+  )
+  (critic): Sequential(
+    (0): Linear(in_features=64, out_features=64, bias=True)
+    (1): Tanh()
+    (2): Linear(in_features=64, out_features=1, bias=True)
+  )
+)
+
+Optimizer loaded
+
+U 16 | F 032768 | FPS 0204 | D 10 | rR:μσmM 0.35 0.45 0.00 0.97 | F:μσmM 50.6 28.6 9.0 116.0 | H 1.922 | V 0.219 | pL 0.011 | vL 0.022 | ∇ 0.040
+U 17 | F 034816 | FPS 0150 | D 23 | rR:μσmM 0.42 0.45 0.00 0.96 | F:μσmM 77.5 64.1 15.0 249.0 | H 1.924 | V 0.206 | pL -0.006 | vL 0.015 | ∇ 0.035
+U 18 | F 036864 | FPS 0106 | D 43 | rR:μσmM 0.54 0.42 0.00 0.96 | F:μσmM 89.9 70.5 19.0 249.0 | H 1.917 | V 0.195 | pL -0.011 | vL 0.014 | ∇ 0.032
+U 19 | F 038912 | FPS 0051 | D 83 | rR:μσmM 0.42 0.44 0.00 0.97 | F:μσmM 72.8 66.3 14.0 275.0 | H 1.908 | V 0.212 | pL -0.012 | vL 0.026 | ∇ 0.053
+U 20 | F 040960 | FPS 0053 | D 122 | rR:μσmM 0.50 0.46 0.00 0.96 | F:μσmM 60.3 110.5 17.0 605.0 | H 1.909 | V 0.200 | pL -0.036 | vL 0.022 | ∇ 0.043
+Status saved
+/workspace/DIFO-on-POMDP/skill_based/scripts/train_agent/train_adversarial.py --env MiniGrid-MemoryS11-v0 --map_size 11 --exp_name properly_load_lstm --episodes 1000 --disc_epochs 5 --GAIL_iters 10 --encoder lstm --ppo_updates 5
+
+Namespace(algo='ppo', env='MiniGrid-MemoryS11-v0', disc_path='scripts/train_agent/advs_output/properly_load_lstm/discriminator/model.pt', model='properly_load_lstm', seed=1, log_interval=1, save_interval=5, update_per_gail_iter=5, procs=16, frames=10000000, epochs=4, batch_size=256, frames_per_proc=None, discount=0.99, lr=0.001, gae_lambda=0.95, entropy_coef=0.05, value_loss_coef=0.5, max_grad_norm=0.5, optim_eps=1e-08, clip_eps=0.2, recurrence=4, text=False, full_obs=False, regularize_disc=False, encoder='lstm', policy_ckpt_path='ckpt/memory_lstm_11/best.pth', mem=True)
+
+Device: cuda
+
+Environments loaded
+
+Training status loaded
+
+Observations preprocessor loaded
+Model loaded
+
+ACModel(
+  (image_conv): Sequential(
+    (0): Conv2d(3, 16, kernel_size=(2, 2), stride=(1, 1))
+    (1): ReLU()
+    (2): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
+    (3): Conv2d(16, 32, kernel_size=(2, 2), stride=(1, 1))
+    (4): ReLU()
+    (5): Conv2d(32, 64, kernel_size=(2, 2), stride=(1, 1))
+    (6): ReLU()
+  )
+  (memory_rnn): LSTMCell(64, 64)
+  (actor): Sequential(
+    (0): Linear(in_features=64, out_features=64, bias=True)
+    (1): Tanh()
+    (2): Linear(in_features=64, out_features=7, bias=True)
+  )
+  (critic): Sequential(
+    (0): Linear(in_features=64, out_features=64, bias=True)
+    (1): Tanh()
+    (2): Linear(in_features=64, out_features=1, bias=True)
+  )
+)
+
+Optimizer loaded
+
+U 21 | F 043008 | FPS 0171 | D 11 | rR:μσmM 0.47 0.47 0.00 0.99 | F:μσmM 36.4 25.0 8.0 99.0 | H 1.895 | V 0.283 | pL -0.013 | vL 0.035 | ∇ 0.062
+U 22 | F 045056 | FPS 0109 | D 30 | rR:μσmM 0.38 0.46 0.00 0.98 | F:μσmM 42.6 29.1 11.0 141.0 | H 1.900 | V 0.275 | pL 0.008 | vL 0.039 | ∇ 0.054
+U 23 | F 047104 | FPS 0086 | D 54 | rR:μσmM 0.39 0.46 0.00 0.98 | F:μσmM 53.5 48.6 8.0 302.0 | H 1.914 | V 0.302 | pL 0.001 | vL 0.036 | ∇ 0.065
+U 24 | F 049152 | FPS 0055 | D 91 | rR:μσmM 0.41 0.47 0.00 0.98 | F:μσmM 43.2 30.5 14.0 127.0 | H 1.906 | V 0.260 | pL 0.006 | vL 0.033 | ∇ 0.043
+U 25 | F 051200 | FPS 0064 | D 123 | rR:μσmM 0.46 0.45 0.00 0.96 | F:μσmM 57.5 47.0 8.0 234.0 | H 1.918 | V 0.318 | pL -0.021 | vL 0.029 | ∇ 0.050
+Status saved
+/workspace/DIFO-on-POMDP/skill_based/scripts/train_agent/train_adversarial.py --env MiniGrid-MemoryS11-v0 --map_size 11 --exp_name properly_load_lstm --episodes 1000 --disc_epochs 5 --GAIL_iters 10 --encoder lstm --ppo_updates 5
+
+Namespace(algo='ppo', env='MiniGrid-MemoryS11-v0', disc_path='scripts/train_agent/advs_output/properly_load_lstm/discriminator/model.pt', model='properly_load_lstm', seed=1, log_interval=1, save_interval=5, update_per_gail_iter=5, procs=16, frames=10000000, epochs=4, batch_size=256, frames_per_proc=None, discount=0.99, lr=0.001, gae_lambda=0.95, entropy_coef=0.05, value_loss_coef=0.5, max_grad_norm=0.5, optim_eps=1e-08, clip_eps=0.2, recurrence=4, text=False, full_obs=False, regularize_disc=False, encoder='lstm', policy_ckpt_path='ckpt/memory_lstm_11/best.pth', mem=True)
+
+Device: cuda
+
+Environments loaded
+
+Training status loaded
+
+Observations preprocessor loaded
+Model loaded
+
+ACModel(
+  (image_conv): Sequential(
+    (0): Conv2d(3, 16, kernel_size=(2, 2), stride=(1, 1))
+    (1): ReLU()
+    (2): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
+    (3): Conv2d(16, 32, kernel_size=(2, 2), stride=(1, 1))
+    (4): ReLU()
+    (5): Conv2d(32, 64, kernel_size=(2, 2), stride=(1, 1))
+    (6): ReLU()
+  )
+  (memory_rnn): LSTMCell(64, 64)
+  (actor): Sequential(
+    (0): Linear(in_features=64, out_features=64, bias=True)
+    (1): Tanh()
+    (2): Linear(in_features=64, out_features=7, bias=True)
+  )
+  (critic): Sequential(
+    (0): Linear(in_features=64, out_features=64, bias=True)
+    (1): Tanh()
+    (2): Linear(in_features=64, out_features=1, bias=True)
+  )
+)
+
+Optimizer loaded
+
+U 26 | F 053248 | FPS 0262 | D 7 | rR:μσmM 0.55 0.46 0.00 0.99 | F:μσmM 48.7 27.1 7.0 109.0 | H 1.910 | V 0.300 | pL -0.015 | vL 0.027 | ∇ 0.048
+U 27 | F 055296 | FPS 0095 | D 29 | rR:μσmM 0.34 0.45 0.00 0.99 | F:μσmM 47.7 41.2 7.0 201.0 | H 1.912 | V 0.241 | pL 0.031 | vL 0.035 | ∇ 0.055
+U 28 | F 057344 | FPS 0081 | D 54 | rR:μσmM 0.48 0.47 0.00 0.97 | F:μσmM 43.3 24.8 13.0 111.0 | H 1.913 | V 0.285 | pL -0.028 | vL 0.036 | ∇ 0.058
+U 29 | F 059392 | FPS 0081 | D 79 | rR:μσmM 0.40 0.46 0.00 0.98 | F:μσmM 58.8 56.6 14.0 346.0 | H 1.906 | V 0.265 | pL 0.013 | vL 0.029 | ∇ 0.039
+U 30 | F 061440 | FPS 0049 | D 121 | rR:μσmM 0.45 0.47 0.00 0.98 | F:μσmM 52.1 76.3 9.0 503.0 | H 1.904 | V 0.286 | pL -0.012 | vL 0.036 | ∇ 0.045
+Status saved

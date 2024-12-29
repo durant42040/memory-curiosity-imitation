@@ -1,0 +1,266 @@
+/workspace/DIFO-on-POMDP/skill_based/scripts/train_agent/train_adversarial.py --env MiniGrid-MemoryS11-v0 --map_size 11 --exp_name transformer_test --episodes 1000 --disc_epochs 5 --GAIL_iters 10 --encoder transformer --ppo_updates 5
+
+Namespace(algo='ppo', env='MiniGrid-MemoryS11-v0', disc_path='scripts/train_agent/advs_output/transformer_test/discriminator/model.pt', model='transformer_test', seed=1, log_interval=1, save_interval=5, update_per_gail_iter=5, procs=16, frames=10000000, epochs=4, batch_size=256, frames_per_proc=None, discount=0.99, lr=0.001, gae_lambda=0.95, entropy_coef=0.05, value_loss_coef=0.5, max_grad_norm=0.5, optim_eps=1e-08, clip_eps=0.2, recurrence=4, text=False, full_obs=False, regularize_disc=False, encoder='transformer', policy_ckpt_path='ckpt/memory_transformer_11/best.pth', mem=True)
+
+Device: cuda
+
+Environments loaded
+
+Training status loaded
+
+Observations preprocessor loaded
+Model loaded
+
+ACModel(
+  (image_conv): Sequential(
+    (0): Conv2d(3, 16, kernel_size=(2, 2), stride=(1, 1))
+    (1): ReLU()
+    (2): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
+    (3): Conv2d(16, 32, kernel_size=(2, 2), stride=(1, 1))
+    (4): ReLU()
+    (5): Conv2d(32, 64, kernel_size=(2, 2), stride=(1, 1))
+    (6): ReLU()
+  )
+  (memory_rnn): LSTMCell(64, 64)
+  (actor): Sequential(
+    (0): Linear(in_features=64, out_features=64, bias=True)
+    (1): Tanh()
+    (2): Linear(in_features=64, out_features=7, bias=True)
+  )
+  (critic): Sequential(
+    (0): Linear(in_features=64, out_features=64, bias=True)
+    (1): Tanh()
+    (2): Linear(in_features=64, out_features=1, bias=True)
+  )
+)
+
+Optimizer loaded
+
+/workspace/DIFO-on-POMDP/skill_based/scripts/train_agent/train_adversarial.py --env MiniGrid-MemoryS11-v0 --map_size 11 --exp_name transformer_test --episodes 1000 --disc_epochs 5 --GAIL_iters 10 --encoder transformer --ppo_updates 5
+
+Namespace(algo='ppo', env='MiniGrid-MemoryS11-v0', disc_path='scripts/train_agent/advs_output/transformer_test/discriminator/model.pt', model='transformer_test', seed=1, log_interval=1, save_interval=5, update_per_gail_iter=5, procs=16, frames=10000000, epochs=4, batch_size=256, frames_per_proc=None, discount=0.99, lr=0.001, gae_lambda=0.95, entropy_coef=0.05, value_loss_coef=0.5, max_grad_norm=0.5, optim_eps=1e-08, clip_eps=0.2, recurrence=4, text=False, full_obs=False, regularize_disc=False, encoder='transformer', policy_ckpt_path='ckpt/memory_transformer_11/best.pth', mem=True)
+
+Device: cuda
+
+Environments loaded
+
+Training status loaded
+
+Observations preprocessor loaded
+Model loaded
+
+ACModel(
+  (image_conv): Sequential(
+    (0): Conv2d(3, 16, kernel_size=(2, 2), stride=(1, 1))
+    (1): ReLU()
+    (2): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
+    (3): Conv2d(16, 32, kernel_size=(2, 2), stride=(1, 1))
+    (4): ReLU()
+    (5): Conv2d(32, 64, kernel_size=(2, 2), stride=(1, 1))
+    (6): ReLU()
+  )
+  (memory_rnn): LSTMCell(64, 64)
+  (actor): Sequential(
+    (0): Linear(in_features=64, out_features=64, bias=True)
+    (1): Tanh()
+    (2): Linear(in_features=64, out_features=7, bias=True)
+  )
+  (critic): Sequential(
+    (0): Linear(in_features=64, out_features=64, bias=True)
+    (1): Tanh()
+    (2): Linear(in_features=64, out_features=1, bias=True)
+  )
+)
+
+Optimizer loaded
+
+/workspace/DIFO-on-POMDP/skill_based/scripts/train_agent/train_adversarial.py --env MiniGrid-MemoryS11-v0 --map_size 11 --exp_name transformer_test --episodes 1000 --disc_epochs 5 --GAIL_iters 10 --encoder transformer --ppo_updates 5
+
+Namespace(algo='ppo', env='MiniGrid-MemoryS11-v0', disc_path='scripts/train_agent/advs_output/transformer_test/discriminator/model.pt', model='transformer_test', seed=1, log_interval=1, save_interval=5, update_per_gail_iter=5, procs=16, frames=10000000, epochs=4, batch_size=256, frames_per_proc=None, discount=0.99, lr=0.001, gae_lambda=0.95, entropy_coef=0.05, value_loss_coef=0.5, max_grad_norm=0.5, optim_eps=1e-08, clip_eps=0.2, recurrence=4, text=False, full_obs=False, regularize_disc=False, encoder='transformer', policy_ckpt_path='ckpt/memory_transformer_11/best.pth', mem=True)
+
+Device: cuda
+
+Environments loaded
+
+Training status loaded
+
+Observations preprocessor loaded
+Model loaded
+
+ACModel(
+  (image_conv): Sequential(
+    (0): Conv2d(3, 16, kernel_size=(2, 2), stride=(1, 1))
+    (1): ReLU()
+    (2): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
+    (3): Conv2d(16, 32, kernel_size=(2, 2), stride=(1, 1))
+    (4): ReLU()
+    (5): Conv2d(32, 64, kernel_size=(2, 2), stride=(1, 1))
+    (6): ReLU()
+  )
+  (memory_rnn): LSTMCell(64, 64)
+  (actor): Sequential(
+    (0): Linear(in_features=64, out_features=64, bias=True)
+    (1): Tanh()
+    (2): Linear(in_features=64, out_features=7, bias=True)
+  )
+  (critic): Sequential(
+    (0): Linear(in_features=64, out_features=64, bias=True)
+    (1): Tanh()
+    (2): Linear(in_features=64, out_features=1, bias=True)
+  )
+)
+
+Optimizer loaded
+
+/workspace/DIFO-on-POMDP/skill_based/scripts/train_agent/train_adversarial.py --env MiniGrid-MemoryS11-v0 --map_size 11 --exp_name transformer_test --episodes 1000 --disc_epochs 5 --GAIL_iters 10 --encoder transformer --ppo_updates 5
+
+Namespace(algo='ppo', env='MiniGrid-MemoryS11-v0', disc_path='scripts/train_agent/advs_output/transformer_test/discriminator/model.pt', model='transformer_test', seed=1, log_interval=1, save_interval=5, update_per_gail_iter=5, procs=16, frames=10000000, epochs=4, batch_size=256, frames_per_proc=None, discount=0.99, lr=0.001, gae_lambda=0.95, entropy_coef=0.05, value_loss_coef=0.5, max_grad_norm=0.5, optim_eps=1e-08, clip_eps=0.2, recurrence=4, text=False, full_obs=False, regularize_disc=False, encoder='transformer', policy_ckpt_path='ckpt/memory_transformer_11/best.pth', mem=True)
+
+Device: cuda
+
+Environments loaded
+
+Training status loaded
+
+Observations preprocessor loaded
+Model loaded
+
+ACModel(
+  (image_conv): Sequential(
+    (0): Conv2d(3, 16, kernel_size=(2, 2), stride=(1, 1))
+    (1): ReLU()
+    (2): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
+    (3): Conv2d(16, 32, kernel_size=(2, 2), stride=(1, 1))
+    (4): ReLU()
+    (5): Conv2d(32, 64, kernel_size=(2, 2), stride=(1, 1))
+    (6): ReLU()
+  )
+  (memory_rnn): LSTMCell(64, 64)
+  (actor): Sequential(
+    (0): Linear(in_features=64, out_features=64, bias=True)
+    (1): Tanh()
+    (2): Linear(in_features=64, out_features=7, bias=True)
+  )
+  (critic): Sequential(
+    (0): Linear(in_features=64, out_features=64, bias=True)
+    (1): Tanh()
+    (2): Linear(in_features=64, out_features=1, bias=True)
+  )
+)
+
+Optimizer loaded
+
+/workspace/DIFO-on-POMDP/skill_based/scripts/train_agent/train_adversarial.py --env MiniGrid-MemoryS11-v0 --map_size 11 --exp_name transformer_test --episodes 1000 --disc_epochs 5 --GAIL_iters 10 --encoder transformer --ppo_updates 5
+
+Namespace(algo='ppo', env='MiniGrid-MemoryS11-v0', disc_path='scripts/train_agent/advs_output/transformer_test/discriminator/model.pt', model='transformer_test', seed=1, log_interval=1, save_interval=5, update_per_gail_iter=5, procs=16, frames=10000000, epochs=4, batch_size=256, frames_per_proc=None, discount=0.99, lr=0.001, gae_lambda=0.95, entropy_coef=0.05, value_loss_coef=0.5, max_grad_norm=0.5, optim_eps=1e-08, clip_eps=0.2, recurrence=4, text=False, full_obs=False, regularize_disc=False, encoder='transformer', policy_ckpt_path='ckpt/memory_transformer_11/best.pth', mem=True)
+
+Device: cuda
+
+Environments loaded
+
+Training status loaded
+
+Observations preprocessor loaded
+Model loaded
+
+ACModel(
+  (image_conv): Sequential(
+    (0): Conv2d(3, 16, kernel_size=(2, 2), stride=(1, 1))
+    (1): ReLU()
+    (2): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
+    (3): Conv2d(16, 32, kernel_size=(2, 2), stride=(1, 1))
+    (4): ReLU()
+    (5): Conv2d(32, 64, kernel_size=(2, 2), stride=(1, 1))
+    (6): ReLU()
+  )
+  (memory_rnn): LSTMCell(64, 64)
+  (actor): Sequential(
+    (0): Linear(in_features=64, out_features=64, bias=True)
+    (1): Tanh()
+    (2): Linear(in_features=64, out_features=7, bias=True)
+  )
+  (critic): Sequential(
+    (0): Linear(in_features=64, out_features=64, bias=True)
+    (1): Tanh()
+    (2): Linear(in_features=64, out_features=1, bias=True)
+  )
+)
+
+Optimizer loaded
+
+/workspace/DIFO-on-POMDP/skill_based/scripts/train_agent/train_adversarial.py --env MiniGrid-MemoryS11-v0 --map_size 11 --exp_name transformer_test --episodes 1000 --disc_epochs 5 --GAIL_iters 10 --encoder transformer --ppo_updates 5
+
+Namespace(algo='ppo', env='MiniGrid-MemoryS11-v0', disc_path='scripts/train_agent/advs_output/transformer_test/discriminator/model.pt', model='transformer_test', seed=1, log_interval=1, save_interval=5, update_per_gail_iter=5, procs=16, frames=10000000, epochs=4, batch_size=256, frames_per_proc=None, discount=0.99, lr=0.001, gae_lambda=0.95, entropy_coef=0.05, value_loss_coef=0.5, max_grad_norm=0.5, optim_eps=1e-08, clip_eps=0.2, recurrence=4, text=False, full_obs=False, regularize_disc=False, encoder='transformer', policy_ckpt_path='ckpt/memory_transformer_11/best.pth', mem=True)
+
+Device: cuda
+
+Environments loaded
+
+Training status loaded
+
+Observations preprocessor loaded
+Model loaded
+
+ACModel(
+  (image_conv): Sequential(
+    (0): Conv2d(3, 16, kernel_size=(2, 2), stride=(1, 1))
+    (1): ReLU()
+    (2): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
+    (3): Conv2d(16, 32, kernel_size=(2, 2), stride=(1, 1))
+    (4): ReLU()
+    (5): Conv2d(32, 64, kernel_size=(2, 2), stride=(1, 1))
+    (6): ReLU()
+  )
+  (memory_rnn): LSTMCell(64, 64)
+  (actor): Sequential(
+    (0): Linear(in_features=64, out_features=64, bias=True)
+    (1): Tanh()
+    (2): Linear(in_features=64, out_features=7, bias=True)
+  )
+  (critic): Sequential(
+    (0): Linear(in_features=64, out_features=64, bias=True)
+    (1): Tanh()
+    (2): Linear(in_features=64, out_features=1, bias=True)
+  )
+)
+
+Optimizer loaded
+
+/workspace/DIFO-on-POMDP/skill_based/scripts/train_agent/train_adversarial.py --env MiniGrid-MemoryS11-v0 --map_size 11 --exp_name transformer_test --episodes 1000 --disc_epochs 5 --GAIL_iters 10 --encoder transformer --ppo_updates 5
+
+Namespace(algo='ppo', env='MiniGrid-MemoryS11-v0', disc_path='scripts/train_agent/advs_output/transformer_test/discriminator/model.pt', model='transformer_test', seed=1, log_interval=1, save_interval=5, update_per_gail_iter=5, procs=16, frames=10000000, epochs=4, batch_size=256, frames_per_proc=None, discount=0.99, lr=0.001, gae_lambda=0.95, entropy_coef=0.05, value_loss_coef=0.5, max_grad_norm=0.5, optim_eps=1e-08, clip_eps=0.2, recurrence=4, text=False, full_obs=False, regularize_disc=False, encoder='transformer', policy_ckpt_path='ckpt/memory_transformer_11/best.pth', mem=True)
+
+Device: cuda
+
+Environments loaded
+
+Training status loaded
+
+Observations preprocessor loaded
+Model loaded
+
+ACModel(
+  (image_conv): Sequential(
+    (0): Conv2d(3, 16, kernel_size=(2, 2), stride=(1, 1))
+    (1): ReLU()
+    (2): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
+    (3): Conv2d(16, 32, kernel_size=(2, 2), stride=(1, 1))
+    (4): ReLU()
+    (5): Conv2d(32, 64, kernel_size=(2, 2), stride=(1, 1))
+    (6): ReLU()
+  )
+  (memory_rnn): LSTMCell(64, 64)
+  (actor): Sequential(
+    (0): Linear(in_features=64, out_features=64, bias=True)
+    (1): Tanh()
+    (2): Linear(in_features=64, out_features=7, bias=True)
+  )
+  (critic): Sequential(
+    (0): Linear(in_features=64, out_features=64, bias=True)
+    (1): Tanh()
+    (2): Linear(in_features=64, out_features=1, bias=True)
+  )
+)
+
+Optimizer loaded
+
